@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <h4>
+      Symbol:
+      {{ data.ticker }}
+    </h4>
+
+    <h4>
+      Status:
+      {{ data.status }}
+    </h4>
+  </div>
+
+  <mat-card class="custom-table">
+    <mat-table [dataSource]="dataSource">
+      <mat-card>
+        <ng-container matColumnDef="l">
+          <mat-header-cell *matHeaderCellDef> Low </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.l }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="o">
+          <mat-header-cell *matHeaderCellDef> Open </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.o }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="h">
+          <mat-header-cell *matHeaderCellDef> High</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.h }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="c">
+          <mat-header-cell *matHeaderCellDef> Close</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.c }} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-card>
+    </mat-table>
+
+    <mat-paginator
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25]"
+      showFirstLastButtons
+    ></mat-paginator>
+  </mat-card>
+</div>

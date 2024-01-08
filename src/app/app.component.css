@@ -1,0 +1,20 @@
+table {
+  width: 100%;
+  padding-bottom: 12px;
+}
+.custom-table {
+  table-layout:fixed;
+  margin: 60px;
+  border-radius: 12px;
+}
+
+mat-cell,
+mat-header-cell {
+  padding: 8px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+mat-header-cell {
+  font-weight: bold;
+}
