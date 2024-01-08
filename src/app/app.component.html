@@ -14,9 +14,9 @@
   <mat-card class="custom-table">
     <mat-table [dataSource]="dataSource">
       <mat-card>
-        <ng-container matColumnDef="l">
-          <mat-header-cell *matHeaderCellDef> Low </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{ element.l }} </mat-cell>
+        <ng-container matColumnDef="c">
+          <mat-header-cell *matHeaderCellDef> Close</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.c }} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="o">
@@ -29,9 +29,9 @@
           <mat-cell *matCellDef="let element"> {{ element.h }} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="c">
-          <mat-header-cell *matHeaderCellDef> Close</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{ element.c }} </mat-cell>
+        <ng-container matColumnDef="l">
+          <mat-header-cell *matHeaderCellDef> Low </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.l }} </mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
